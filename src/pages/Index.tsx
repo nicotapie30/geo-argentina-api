@@ -288,13 +288,13 @@ const Index = () => {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5, ease }}
         >
-          <div className="space-y-1">
+          <div className="space-y-1 min-w-0">
             <p className="text-xs font-mono text-primary uppercase tracking-widest">Base URL</p>
-            <code className="text-sm font-mono text-foreground">
+            <code className="text-sm font-mono text-foreground break-all">
               https://geoargentinaapi.up.railway.app/v1
             </code>
           </div>
-          <div className="flex items-center gap-6 text-xs text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground shrink-0">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span>Online</span>

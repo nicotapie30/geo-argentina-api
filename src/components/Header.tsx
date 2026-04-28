@@ -31,7 +31,7 @@ export const Header = () => {
     >
       <motion.header
         style={{ borderRadius, maxWidth, boxShadow }}
-        className="w-full bg-background/70 backdrop-blur-md border border-border overflow-hidden"
+        className="relative w-full bg-background/70 backdrop-blur-md border border-border"
       >
         <div className="px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -93,13 +93,13 @@ export const Header = () => {
           {mobileOpen && (
             <motion.div
               key="mobile-menu"
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-              className="overflow-hidden border-t border-border"
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
+              className="absolute top-full left-0 right-0 mt-2 mx-3 rounded-xl border border-border bg-background/95 backdrop-blur-md shadow-xl overflow-hidden"
             >
-              <div className="px-6 py-3 flex flex-col gap-1">
+              <div className="px-3 py-3 flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
@@ -110,7 +110,7 @@ export const Header = () => {
                     {link.label}
                   </a>
                 ))}
-                <div className="mt-2 pt-2 border-t border-border">
+                <div className="mt-1 pt-2 border-t border-border">
                   <a
                     href="https://github.com/nicotapie30/geo-argentina-api"
                     target="_blank"
