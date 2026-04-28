@@ -1,28 +1,45 @@
-import { MapPin, Heart } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Heart } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border py-12">
+    <motion.footer
+      className="border-t border-border py-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+    >
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-              <MapPin className="w-5 h-5 text-primary" />
-            </div>
-            <span className="text-lg font-semibold text-foreground">GeoArgentinaAPI</span>
-          </div>
-          
+          <span className="text-lg font-semibold">
+            GeoArgentina<span className="text-primary">API</span>
+          </span>
+
           <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Hecho con <Heart className="w-4 h-4 text-destructive fill-destructive" /> en Argentina
+            Hecho con <Heart className="w-4 h-4 text-red-400 fill-red-400 mx-1" /> en Argentina
           </p>
-          
+
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Términos</a>
-            <a href="#" className="hover:text-foreground transition-colors">Privacidad</a>
-            <a href="#" className="hover:text-foreground transition-colors">Contacto</a>
+            <a
+              href="https://github.com/nicotapie30/geo-argentina-api"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              Repositorio
+            </a>
+            <a
+              href="https://geoargentinaapi.up.railway.app/v1/provincias"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              API
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
