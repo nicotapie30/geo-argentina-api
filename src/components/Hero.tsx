@@ -22,7 +22,7 @@ const ease = [0.23, 1, 0.32, 1] as const;
 
 const AnimatedCounter = ({ value, delay = 0 }: { value: number; delay?: number }) => {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
+  const inView = useInView(ref, { once: true, margin: '0px 0px -80px 0px' });
 
   useEffect(() => {
     if (!inView || !ref.current) return;
