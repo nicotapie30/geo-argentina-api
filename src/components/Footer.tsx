@@ -30,7 +30,7 @@ export const Footer = () => {
               Repositorio
             </a>
             <a
-              href="https://geoargentinaapi.up.railway.app/v1/provincias"
+              href="https://geoargentinaapi.onrender.com/v1/provincias"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"

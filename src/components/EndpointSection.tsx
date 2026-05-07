@@ -28,7 +28,7 @@ const methodColors: Record<string, string> = {
 };
 
 const ease = [0.23, 1, 0.32, 1];
-const BASE_URL = 'https://geoargentinaapi.up.railway.app';
+const BASE_URL = 'https://geoargentinaapi.onrender.com';
 
 function buildCurlUrl(endpoint: string): string {
   return BASE_URL + endpoint.replace(/:(\w+)/g, (_, key) => {

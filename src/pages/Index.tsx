@@ -291,7 +291,7 @@ const Index = () => {
           <div className="space-y-1 min-w-0">
             <p className="text-xs font-mono text-primary uppercase tracking-widest">Base URL</p>
             <code className="text-sm font-mono text-foreground break-all">
-              https://geoargentinaapi.up.railway.app/v1
+              https://geoargentinaapi.onrender.com/v1
             </code>
           </div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground shrink-0">

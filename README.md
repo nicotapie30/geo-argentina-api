@@ -21,7 +21,7 @@ npm run dev
 
 ## API
 
-Base URL: `https://geoargentinaapi.up.railway.app/v1`
+Base URL: `https://geoargentinaapi.onrender.com/v1`
 
 Recursos disponibles: provincias, departamentos, localidades.
 Sin autenticación · JSON · 120 req/min.

@@ -5,7 +5,7 @@ import { CodeBlock } from './CodeBlock';
 
 const exampleCode = `// Ejemplo de uso con fetch
 const response = await fetch(
-  'https://geoargentinaapi.up.railway.app/v1/provincias'
+  'https://geoargentinaapi.onrender.com/v1/provincias'
 );
 
 const data = await response.json();
